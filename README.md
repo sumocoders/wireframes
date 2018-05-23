@@ -14,6 +14,29 @@ Browsing the wireframes is done by using PHP's build in webserver:
 
     php -S 127.0.0.1:8000 -t public
 
+### Mails
+
+In some applications mails need to be send. In the wireframes you can add a screen after an action and before the
+result is shown.
+
+In this screen you can show the developer and client what the mail needs to contain.
+
+There are some required variables that you need to provide:
+
+* `next_page`, this defines the url for the next page.
+* `from`, This defines the sender of the mail, eg: `Advalvas <no-reply@advalvas.be>`.
+* `to`, this defines to whom the mail will be send, eg: `Jelle Fiers <jfiers@mathieu.com>`.
+* `subject`, this defines the subject of the mail, eg:`This is the subject`.
+
+And some optional variables:
+
+* `cc`, this defines to whom a copy will be send, eg `Kobe Fontaine <kobe.fontaine@advalvas.be>, Sales <sales@advalvas.be>`.
+* `bcc`, this defines to whom a blind copy will be send, eg `Administratie <admin@advalvas.be>`.
+* `replyTo`, this defines to whom the reply should be send, eg `Administratie <admin@advalvas.be>`.
+
+An examples is available in `templates/examples/mail/mail.html.twig` and can be viewed at 
+[/examples/mail/mail](/examples/mail/mail).
+
 ### Writing documentation
 
 By default there is a way to write documentation about the wireframes you create. 

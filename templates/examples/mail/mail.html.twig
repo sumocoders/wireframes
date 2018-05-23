@@ -1,0 +1,36 @@
+{# This defines the url for the next page, and is required #}
+{% set next_page = '#' %}
+{# This defines the sender of the mail, and is required #}
+{% set from = 'Advalvas <no-reply@advalvas.be>' %}
+{# This defines to whom the mail will be send, and is required #}
+{% set to = 'Jelle Fiers <jfiers@mathieu.com>' %}
+{# This defines the subject of the mail, and is required #}
+{% set subject = 'This is the subject' %}
+
+{# This defines to whom a copy will be send, and is optional #}
+{% set cc = 'Kobe Fontaine <kobe.fontaine@advalvas.be>, Sales <sales@advalvas.be>' %}
+{# This defines to whom a blind copy will be send, and is optional #}
+{% set bcc = 'Administratie <admin@advalvas.be>' %}
+{# This defines to whom the reply should be send, and is optional #}
+{% set replyTo = 'Administratie <admin@advalvas.be>' %}
+
+{% extends '_layouts/mail.html.twig' %}
+
+{% block body %}
+  <p>Hallo Jelle</p>
+  <p>
+    Molestiae aut alias dolorem ratione repudiandae. Et ea et velit dicta. Atque veritatis tempora unde sed ad eveniet
+    ullam. Autem sequi et rerum tempore eos unde quos corrupti.
+  </p>
+  <p>
+    <a href="#" class="btn btn-lg btn-primary">Bekijk rapport</a>
+  </p>
+  <p>
+    Unde maiores excepturi nihil et ad molestiae. Et veritatis id fuga ut est. Expedita esse quo sed itaque neque cum
+    hic.
+  </p>
+  <p>
+    Groeten<br />
+    Je Sumo-applicatie
+  </p>
+{% endblock %}

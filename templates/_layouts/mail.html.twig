@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  {% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('build/css/mail.css') }}">
+  {% endblock %}
+
+  <title>
+    {% block title %}Mail: {{ subject }}!{% endblock %}
+  </title>
+</head>
+<body>
+
+<div class="alert alert-info text-center">
+  <strong>
+    <i class="fa fa-info-circle" aria-hidden="true"></i> Let op:
+  </strong>
+
+  Dit scherm zal niet getoond worden, dit is enkel zichtbaar in de wireframes.
+
+  <a href="{{ next_page }}" class="btn btn-sm btn-secondary">
+    Volgend scherm
+  </a>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <div class="row">
+        <div class="col">
+          <dl class="row">
+            <dt class="col-2 text-right">from:</dt>
+            <dd class="col-10">{{ from }}</dd>
+
+            {% if replyTo is defined %}
+              <dt class="col-2 text-right">reply-to:</dt>
+              <dd class="col-10">{{ replyTo }}</dd>
+            {% endif %}
+
+            <dt class="col-2 text-right">to:</dt>
+            <dd class="col-10">{{ to }}</dd>
+
+            {% if cc is defined %}
+              <dt class="col-2 text-right">cc:</dt>
+              <dd class="col-10">{{ cc }}</dd>
+            {% endif %}
+
+            {% if bcc is defined %}
+              <dt class="col-2 text-right">bcc:</dt>
+              <dd class="col-10">{{ bcc }}</dd>
+            {% endif %}
+
+            <dt class="col-2 text-right">subject:</dt>
+            <dd class="col-10">{{ subject }}</dd>
+          </dl>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="row mail">
+        <div class="col text-center">
+          <p>
+            <img alt="logo" class="center" src="{{ asset('images/logo.png') }}">
+          </p>
+        </div>
+      </div>
+      <div class="row mail">
+        <div class="col">
+          {% block body %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% block javascripts %}
+  <script src="{{ asset('build/js/mail.js') }}"></script>
+{% endblock %}
+</body>
+</html>
+

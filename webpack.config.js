@@ -7,8 +7,10 @@ Encore
     .setPublicPath('/build')
 
     .addEntry('js/docs', './assets/js/docs.js')
+    .addEntry('js/mail', './assets/js/mail.js')
 
     .addStyleEntry('css/docs', './assets/css/docs.scss')
+    .addStyleEntry('css/mail', './assets/css/mail.scss')
 
     .cleanupOutputBeforeBuild()
     .enableSourceMaps(!Encore.isProduction())
