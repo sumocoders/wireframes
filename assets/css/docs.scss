@@ -1,0 +1,46 @@
+// the ~ allows you to reference things in node_modules
+@import "~bootstrap/scss/bootstrap";
+@import "~font-awesome/scss/font-awesome";
+@import "docs/structure";
+@import "docs/sidebar";
+
+section {
+  margin-bottom: $font-size-base * 2;
+
+  header {
+    @extend .border-bottom;
+    margin-bottom: $font-size-base;
+
+    h2,
+    h3 {
+      & > small {
+        @extend .pull-right;
+      }
+    }
+  }
+}
+
+question,
+todo,
+remark,
+answer {
+  @extend .alert;
+  display: block;
+}
+
+question {
+  @extend .alert-warning;
+
+  answer {
+    @extend .alert-info;
+    margin-bottom: 0;
+  }
+}
+
+remark {
+  @extend .alert-info;
+}
+
+todo {
+  @extend .alert-warning;
+}

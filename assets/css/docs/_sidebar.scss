@@ -1,0 +1,42 @@
+#sidebar-wrapper {
+  box-shadow: inset $border-radius 0 $border-radius 0 $gray-900;
+
+  .nav {
+    margin-bottom: .5rem;
+
+    .nav-item {
+      .nav-link {
+        color: $white;
+
+        &:hover {
+          background-color: $gray-500;
+          color: $primary;
+        }
+
+        &.active,
+        &:active,
+        &:focus {
+          background-color: $gray-600;
+        }
+
+        &.disabled {
+          color: $btn-link-disabled-color !important;
+
+          &:hover {
+            background: none;
+          }
+        }
+      }
+
+      .nav-item {
+        .nav-link {
+          padding-left: 1.5rem;
+        }
+      }
+    }
+  }
+
+  footer {
+    margin-top: 3rem;
+  }
+}

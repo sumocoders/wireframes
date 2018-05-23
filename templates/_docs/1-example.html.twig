@@ -1,0 +1,84 @@
+{% extends 'layouts/docs.html.twig' %}
+
+{% block body %}
+  <h1 id="menu">Menu</h1>
+
+  <section>
+    <header>
+      <h2 id="menu__generation">
+        Generation
+      </h2>
+    </header>
+
+    <p>
+      The menu on the right is generated automatically. It will loop all the files in the folder
+      <code>templates/_docs</code> and find all <code>h1</code>-elements with an <code>id</code>-attribute.
+    </p>
+
+    <p>
+      You can structure the documentation in folders as you want. The menu-items are sorted based on the filename of
+      the file and the order of the <code>h1</code>-elements in the file.
+    </p>
+    <p>
+      All <code>h2</code>-elements are added as children of the active menu-item thru javascript.
+    </p>
+  </section>
+
+  <section>
+    <header>
+      <h2 id="menu__questions-answers">
+        Questions & Answers
+
+        <small>
+          <a href="#">/some/link</a>
+        </small>
+      </h2>
+    </header>
+
+    <p>
+      In most cases the wireframes will bring some extra questions on the table, which should be checked with the
+      client. For this we added an extra <code>&lt;question&gt;</code>-element which you can use inside the templates.
+    <p>
+
+    <question>
+      This is a question
+    </question>
+
+    <p>
+      You can add the answer from the client inside the <code>&lt;question&gt;</code>-element with a
+      <code>&lt;answer&gt;</code>-element:
+    </p>
+
+    <question>
+      Is this question answered?
+      <answer>
+        Yes
+      </answer>
+    </question>
+
+    <p>
+      For an easy overview of all unanswered questions, they are listed on the <a href="/_docs">index-page</a> of the
+      docs.
+    </p>
+  </section>
+
+  <section>
+    <header>
+      <h2 id="menu__todos">
+        Todo's
+      </h2>
+    </header>
+
+    <p>
+      The same is implemented for <code>&lt;todo&gt;</code>-elements.
+    </p>
+
+    <todo>
+      Check if we have written all documentation
+    </todo>
+
+    <p>
+      All todo's are listed on the <a href="/_docs">index-page</a> of the docs.
+    </p>
+  </section>
+{% endblock %}

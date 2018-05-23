@@ -1,0 +1,42 @@
+{% extends 'layouts/docs.html.twig' %}
+
+{% block body %}
+  <div class="jumbotron">
+    <h1>Wireframes ...</h1>
+    <p class="lead">
+      ...
+    </p>
+  </div>
+
+  {% if pendingQuestions is not empty %}
+    <section>
+      <header>
+        <h2 id="intro__pending-questions">
+          Openstaande vragen
+        </h2>
+      </header>
+
+      <ul>
+        {% for question in pendingQuestions %}
+          <li>{{ question }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+
+  {% if todos is not empty %}
+    <section>
+      <header>
+        <h2 id="intro__todos">
+          TODO's
+        </h2>
+      </header>
+
+      <ul>
+        {% for todo in todos %}
+          <li>{{ todo }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+{% endblock %}

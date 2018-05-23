@@ -90,7 +90,6 @@ class DocumentationController extends Controller
             }
         );
 
-
         $html = '<ul id="docs-navigation" class="nav flex-column">' . "\n";
         $html .= '<li class="nav-item" id="menu__intro">' . "\n";
         $html .= '  <a class="nav-link" href="/_docs#intro">Intro</a>' . "\n";
