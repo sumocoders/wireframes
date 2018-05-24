@@ -6,13 +6,33 @@ This project will be used as the start for creating wireframes.
 
 ### New project
 
-You can start a project by cloning this repo and removing the `.git`-folder.
+You can start a project by cloning this repo and removing the `.git`-folder. 
+
+After that you should install the dependencies:
+
+    composer install
+    yarn install
+
 
 ### Browsing the wireframes
 
 Browsing the wireframes is done by using PHP's build in webserver:
 
     php -S 127.0.0.1:8000 -t public
+
+### Creating wireframes
+
+The url for a specific page is based on the structure inside the `templates`-folder. Or better said, our controller
+will search for a specific template to render based on the url.
+
+Some examples:
+
+* [http://127.0.0.1/] will be render the template `templates/index.html.twig`
+* [http://127.0.0.1/dolores] will be render the template `templates/dolores.html.twig`
+* [http://127.0.0.1/dolores/voluptas] will be render the template `templates/dolores/voluptas.html.twig`
+* [http://127.0.0.1/dolores/voluptas/nobis-quis] will be render the template `templates/dolores/voluptas/nobis-quis.html.twig`
+* [http://127.0.0.1/dolores/voluptas/nobis-quis/aliquid-velit] will be render the template `templates/dolores/voluptas/nobis-quis/aliquid-velit.html.twig`
+
 
 ### Framework layout
 
