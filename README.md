@@ -14,6 +14,36 @@ Browsing the wireframes is done by using PHP's build in webserver:
 
     php -S 127.0.0.1:8000 -t public
 
+### Framework layout
+
+The framework layout can be used for wireframes that will use the framework. In essence you can use the same Twig-blocks 
+as they are a copy/paste from the framework.
+
+#### User
+
+The current user is shown at the top, and uses a variable called: `user`, this is an object with the following mandatory
+property:
+
+* `email`
+
+Optional you can add a property `role`, which is used for the navigation, see below.
+
+By example:
+
+    {% set user = { 'email': 'alexis17@deprez.org'} %}
+
+#### Navigation
+
+The navigation is included based on the `role`-property of the `user`-object. Per role a file should be placed in 
+`templates/_partials/framework/navigation/_$role.twig.html`.
+
+You can use your own logic on how to set the active state for a menu-item. But we advise to check the example.
+
+By example:
+
+    {% set user = {  'role': 'admin',  'email': 'alexis17@deprez.org'} %}
+    {% set navigation = {  'active': 'contacts'} %}
+
 ### Mails
 
 In some applications mails need to be send. In the wireframes you can add a screen after an action and before the

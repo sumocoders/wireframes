@@ -1,0 +1,14 @@
+@import "~frameworkstylepackage/src/sass/style";
+
+.mail {
+  .text-muted.smaller {
+    @extend small;
+
+    dl {
+      dd {
+        margin-bottom: .2rem;
+      }
+    }
+  }
+
+}

@@ -3,6 +3,7 @@
         "@symfony/webpack-encore": "^0.19.0",
         "bootstrap": "^4.1.1",
         "font-awesome": "^4.7.0",
+        "frameworkstylepackage": "file:/Users/tijs/Sites/sumocoders/FrameworkStylePackage",
         "jquery": "^3.3.1",
         "node-sass": "^4.9.0",
         "popper.js": "^1.14.3",

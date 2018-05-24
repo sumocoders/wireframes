@@ -860,7 +860,7 @@ boom@2.x.x:
   dependencies:
     hoek "2.x.x"
 
-bootstrap@^4.1.1:
+bootstrap@^4.0.0, bootstrap@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.1.1.tgz#3aec85000fa619085da8d2e4983dfd67cf2114cb"
 
@@ -2162,6 +2162,14 @@ fragment-cache@^0.2.1:
   resolved "https://registry.yarnpkg.com/fragment-cache/-/fragment-cache-0.2.1.tgz#4290fad27f13e89be7f33799c6bc5a0abfff0d19"
   dependencies:
     map-cache "^0.2.2"
+
+"frameworkstylepackage@file:/Users/tijs/Sites/sumocoders/FrameworkStylePackage":
+  version "1.0.0"
+  dependencies:
+    bootstrap "^4.0.0"
+    font-awesome "^4.7.0"
+    popper.js "^1.12.9"
+    select2-bootstrap-css "^1.4.6"
 
 fresh@0.5.2:
   version "0.5.2"
@@ -3868,7 +3876,7 @@ pkg-up@^1.0.0:
   dependencies:
     find-up "^1.0.0"
 
-popper.js@^1.14.3:
+popper.js@^1.12.9, popper.js@^1.14.3:
   version "1.14.3"
   resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.14.3.tgz#1438f98d046acf7b4d78cd502bf418ac64d4f095"
 
@@ -4620,6 +4628,10 @@ scss-tokenizer@^0.2.3:
 select-hose@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/select-hose/-/select-hose-2.0.0.tgz#625d8658f865af43ec962bfc376a37359a4994ca"
+
+select2-bootstrap-css@^1.4.6:
+  version "1.4.6"
+  resolved "https://registry.yarnpkg.com/select2-bootstrap-css/-/select2-bootstrap-css-1.4.6.tgz#5cfb68246f5299ca1858e01efd788804c734997e"
 
 selfsigned@^1.9.1:
   version "1.10.3"

@@ -1,0 +1,20 @@
+<div id="main-menu-inner">
+  <div class="navbar navbar-light bg-light p-0 navbar-expand-md flex-column">
+    <div class="wrapper-brand">
+      <a href="/" rel="home" class="logo">
+        <img class="img-responsive" src="/images/logo.png" alt="">
+      </a>
+    </div>
+    <div class="navbar-header d-sm-none">
+      <a class="navbar-brand" href="#">Menu</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    {% if user.role is defined %}
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+      {% include '_partials/framework/navigation/_' ~ user.role ~ '.twig.html' %}
+    </div>
+    {% endif %}
+  </div>
+</div>
