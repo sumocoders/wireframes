@@ -64,6 +64,19 @@ By example:
     {% set user = {  'role': 'admin',  'email': 'alexis17@deprez.org'} %}
     {% set navigation = {  'active': 'contacts'} %}
 
+### Flash messages
+
+Note: this will only work if you have the correct Twig-markup for the notifications. This is default in the Framework-layout.
+
+You can add "flash messages" by using one of the following GET-parameters:
+
+* success
+* report
+* warning
+* error
+
+The key indicates the type of the message, the value is the string that will be shown as the message
+
 ### Mails
 
 In some applications mails need to be send. In the wireframes you can add a screen after an action and before the
