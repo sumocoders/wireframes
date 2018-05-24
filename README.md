@@ -27,11 +27,11 @@ will search for a specific template to render based on the url.
 
 Some examples:
 
-* [http://127.0.0.1/] will be render the template `templates/index.html.twig`
-* [http://127.0.0.1/dolores] will be render the template `templates/dolores.html.twig`
-* [http://127.0.0.1/dolores/voluptas] will be render the template `templates/dolores/voluptas.html.twig`
-* [http://127.0.0.1/dolores/voluptas/nobis-quis] will be render the template `templates/dolores/voluptas/nobis-quis.html.twig`
-* [http://127.0.0.1/dolores/voluptas/nobis-quis/aliquid-velit] will be render the template `templates/dolores/voluptas/nobis-quis/aliquid-velit.html.twig`
+* [http://127.0.0.1/] will render the template `templates/index.html.twig`
+* [http://127.0.0.1/dolores] will render the template `templates/dolores.html.twig`
+* [http://127.0.0.1/dolores/voluptas] will render the template `templates/dolores/voluptas.html.twig`
+* [http://127.0.0.1/dolores/voluptas/nobis-quis] will render the template `templates/dolores/voluptas/nobis-quis.html.twig`
+* [http://127.0.0.1/dolores/voluptas/nobis-quis/aliquid-velit] will render the template `templates/dolores/voluptas/nobis-quis/aliquid-velit.html.twig`
 
 
 ### Framework layout
