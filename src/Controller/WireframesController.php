@@ -11,8 +11,10 @@ class WireframesController extends Controller
     /**
      * @Route("/")
      */
-    public function homepage()
+    public function homepage(Request $request)
     {
+        $this->addNotifications($request);
+
         return $this->render('index.html.twig');
     }
 
@@ -21,6 +23,8 @@ class WireframesController extends Controller
      */
     public function fallback(Request $request)
     {
+        $this->addNotifications($request);
+
         return $this->render(
             sprintf(
                 '%1$s.%2$s',
@@ -28,5 +32,14 @@ class WireframesController extends Controller
                 'html.twig'
             )
         );
+    }
+
+    private function addNotifications(Request $request)
+    {
+        foreach (['success', 'report', 'warning', 'error'] as $key) {
+            if ($request->get($key)) {
+                $this->addFlash($key, $request->get($key));
+            }
+        }
     }
 }
