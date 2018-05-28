@@ -2,15 +2,6 @@
 {% set navigation = {  'active': 'contacts'} %}
 {% extends '_layouts/framework.html.twig' %}
 
-{% block notifications %}
-  <div class="alert alert-success alert-dismissible notification" role="status">
-    Welkom, {{ user.email }}! Je bent succesvol ingelogd.
-    <button type="button" class="close" data-dismiss="alert" aria-label="{{ 'dialogs.close'|trans|capitalize }}">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-{% endblock %}
-
 {% block breadcrumb %}
   <li class="breadcrumb-item"><a href="#">Home</a></li>
   <li class="breadcrumb-item"><span>Contacten</span></li>
