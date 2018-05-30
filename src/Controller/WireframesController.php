@@ -58,13 +58,18 @@ class WireframesController extends Controller
 
     private function addData()
     {
+        $dataDirectory = __DIR__ . '/../../assets/data';
         $this->data = new \stdClass();
+
+        if(!file_exists($dataDirectory)) {
+            return;
+        }
 
         $finder = new Finder();
         $finder
             ->files()
             ->name('*.json')
-            ->in(__DIR__ . '/../../assets/data');
+            ->in($dataDirectory);
 
         foreach ($finder as $file) {
             $key = str_replace('.json', '', $file->getFilename());
