@@ -77,6 +77,33 @@ You can add "flash messages" by using one of the following GET-parameters:
 
 The key indicates the type of the message, the value is the string that will be shown as the message
 
+### Data
+
+In most wireframes you will need some data. 
+
+All files in `assets/data` will be made available in the template under a variable called: `data`. The data will live 
+under a property with the same name as the file.
+
+For instance:
+
+    # assets/data/contacts.json
+    [
+        {
+            "name": "John Doe",
+            "company: "Doe Inc.",
+            "email: "john@doe.com"
+        },
+        {
+            "name": "Jane Macintosh",
+            "company: "Macintosh Inc.",
+            "email: "jane@macintosh.com"
+        }
+    ]
+    
+Can be used in a template:
+
+    {{ data.contacts[0].name }}
+    
 ### Mails
 
 In some applications mails need to be send. In the wireframes you can add a screen after an action and before the

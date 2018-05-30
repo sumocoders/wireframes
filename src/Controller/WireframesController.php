@@ -2,20 +2,29 @@
 
 namespace App\Controller;
 
+use Symfony\Component\Finder\Finder;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class WireframesController extends Controller
 {
+    private $data;
+
     /**
      * @Route("/")
      */
     public function homepage(Request $request)
     {
         $this->addNotifications($request);
+        $this->addData();
 
-        return $this->render('index.html.twig');
+        return $this->render(
+            'index.html.twig',
+            [
+                'data' => $this->data,
+            ]
+        );
     }
 
     /**
@@ -24,13 +33,17 @@ class WireframesController extends Controller
     public function fallback(Request $request)
     {
         $this->addNotifications($request);
+        $this->addData();
 
         return $this->render(
             sprintf(
                 '%1$s.%2$s',
                 $request->getPathInfo(),
                 'html.twig'
-            )
+            ),
+            [
+                'data' => $this->data,
+            ]
         );
     }
 
@@ -40,6 +53,24 @@ class WireframesController extends Controller
             if ($request->get($key)) {
                 $this->addFlash($key, $request->get($key));
             }
+        }
+    }
+
+    private function addData()
+    {
+        $this->data = new \stdClass();
+
+        $finder = new Finder();
+        $finder
+            ->files()
+            ->name('*.json')
+            ->in(__DIR__ . '/../../assets/data');
+
+        foreach ($finder as $file) {
+            $key = str_replace('.json', '', $file->getFilename());
+            $rawData = json_decode($file->getContents());
+
+            $this->data->{$key} = $rawData;
         }
     }
 }
