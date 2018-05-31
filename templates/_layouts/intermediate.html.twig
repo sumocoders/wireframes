@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  {% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('build/css/mail.css') }}">
+  {% endblock %}
+
+  <title>
+    {% block title %}{% endblock %}
+  </title>
+</head>
+<body>
+
+<div class="alert alert-info text-center">
+  <strong>
+    <i class="fa fa-info-circle" aria-hidden="true"></i> Let op:
+  </strong>
+  Dit scherm zal niet getoond worden, dit is enkel zichtbaar in de wireframes.
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <div class="row">
+        <div class="col">
+          {% block body %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% block javascripts %}
+  <script src="{{ asset('build/js/mail.js') }}"></script>
+{% endblock %}
+</body>
+</html>
+
