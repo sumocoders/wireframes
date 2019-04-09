@@ -17,11 +17,20 @@
     "doctrine/common": {
         "version": "v2.8.1"
     },
+    "doctrine/event-manager": {
+        "version": "v1.0.0"
+    },
     "doctrine/inflector": {
         "version": "v1.3.0"
     },
     "doctrine/lexer": {
         "version": "v1.0.1"
+    },
+    "doctrine/persistence": {
+        "version": "v1.1.0"
+    },
+    "doctrine/reflection": {
+        "version": "v1.0.0"
     },
     "psr/cache": {
         "version": "1.0.1"
@@ -71,6 +80,9 @@
             "ref": "e3868d2f4a5104f19f844fe551099a00c6562527"
         }
     },
+    "symfony/contracts": {
+        "version": "v1.0.2"
+    },
     "symfony/debug": {
         "version": "v4.0.10"
     },
@@ -113,9 +125,6 @@
     "symfony/http-kernel": {
         "version": "v4.0.10"
     },
-    "symfony/lts": {
-        "version": "4-dev"
-    },
     "symfony/polyfill-ctype": {
         "version": "v1.8.0"
     },
@@ -157,6 +166,9 @@
     },
     "symfony/var-dumper": {
         "version": "v4.0.10"
+    },
+    "symfony/var-exporter": {
+        "version": "v4.2.5"
     },
     "symfony/webpack-encore-pack": {
         "version": "1.0",

@@ -14,6 +14,9 @@ Encore
     .addStyleEntry('css/docs', './assets/css/docs.scss')
     .addStyleEntry('css/mail', './assets/css/mail.scss')
 
+    // .enableSingleRuntimeChunk()
+    .disableSingleRuntimeChunk()
+
     .cleanupOutputBeforeBuild()
     .enableSourceMaps(!Encore.isProduction())
 

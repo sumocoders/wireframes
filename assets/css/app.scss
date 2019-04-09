@@ -1,14 +1,12 @@
-@import "~frameworkstylepackage/src/sass/style";
+@import '~frameworkstylepackage/src/sass/style';
+@import '~font-awesome/scss/font-awesome';
 
 .mail {
   .text-muted.smaller {
     @extend small;
 
-    dl {
-      dd {
-        margin-bottom: .2rem;
-      }
+    dl dd {
+      margin-bottom: .2rem;
     }
   }
-
 }
