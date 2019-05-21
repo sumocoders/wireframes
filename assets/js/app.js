@@ -9,7 +9,7 @@ import "select2";
 
 $(document).ready(function () {
     $("select.select2").select2({
-        dropdownAutoWidth : true,
+        dropdownAutoWidth: true,
         width: "auto"
     });
 });

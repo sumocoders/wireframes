@@ -61,7 +61,7 @@ class WireframesController extends Controller
         $dataDirectory = __DIR__ . '/../../assets/data';
         $this->data = new \stdClass();
 
-        if(!file_exists($dataDirectory)) {
+        if (!file_exists($dataDirectory)) {
             return;
         }
 

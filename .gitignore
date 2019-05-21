@@ -1,6 +1,7 @@
-
 ###> symfony/framework-bundle ###
-/.env
+/.env.local
+/.env.local.php
+/.env.*.local
 /public/bundles/
 /var/
 /vendor/
@@ -12,3 +13,13 @@
 npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-pack ###
+
+###> squizlabs/php_codesniffer ###
+/.phpcs-cache
+/phpcs.xml
+###< squizlabs/php_codesniffer ###
+
+###> gitlab/output ###
+phpcs-report.xml
+phpstan-report.xml
+###< gitlab/output ###
